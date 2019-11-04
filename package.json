@@ -1,0 +1,43 @@
+{
+  "name": "tcc-express",
+  "version": "1.0.0",
+  "description": "tcc project",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "ts-node src/test.ts",
+    "build": "tsc",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/server.ts",
+    "start": "node ./dist/server.js",
+    "prod": "npm run build && npm run server-restart",
+    "server-restart": "forever stopall && NODE_ENV=production forever start ./dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreiox/tcc-express.git"
+  },
+  "keywords": [
+    "Express",
+    "Microservices"
+  ],
+  "author": "Andre Macedo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andreiox/tcc-express/issues"
+  },
+  "homepage": "https://github.com/andreiox/tcc-express#readme",
+  "dependencies": {
+    "@types/express": "^4.17.2",
+    "@types/node": "^11.10.4",
+    "@types/pg": "^7.11.2",
+    "@types/uuid": "^3.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10",
+    "pg": "^7.12.1",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333",
+    "uuid": "^3.3.3"
+  }
+}

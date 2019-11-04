@@ -1,2 +1,13 @@
 # tcc-express
-Aplicação express para o TCC
+
+## Installation
+
+```npm install```
+
+## Development
+
+```npm run dev```
+
+## Production
+
+```npm run prod```
