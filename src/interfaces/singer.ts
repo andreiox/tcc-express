@@ -9,7 +9,7 @@ create table singers (
     birthday timestamp not null,
     country varchar(255) not null,
     age integer not null,
-    created_at timestamp not null,
+    created_at timestamp not null
 );
 */
 

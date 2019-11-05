@@ -8,7 +8,7 @@ create table musics (
     length_in_seconds integer not null,
     album_id varchar(36) not null,
     singer_id varchar(36) not null,
-    created_at timestamp not null,
+    created_at timestamp not null
 );
 */
 

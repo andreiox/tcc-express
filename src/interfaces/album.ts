@@ -7,7 +7,7 @@ create table albums (
     name varchar(255) not null,
     singer_id varchar(36) not null,
     release_date timestamp not null,
-    created_at timestamp not null,
+    created_at timestamp not null
 );
 */
 
