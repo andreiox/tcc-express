@@ -15,7 +15,12 @@ export function generateUpdateSQL(table: string, data: object): string {
 export function generateSelectSQL(table: string, condition: string[], attributesToRetrieve: string[] = ['*']) {
     const placehouders = condition.map((field, index) => { return `${field}=$${index + 1}` })
 
-    return `SELECT ${attributesToRetrieve.join()} from ${table} WHERE ${placehouders.join(' and ')}`
+    let sql = `SELECT ${attributesToRetrieve.join()} from ${table}`
+    if (placehouders.length) {
+        sql = sql + ` WHERE ${placehouders.join(' and ')}`
+    }
+
+    return sql
 }
 
 export function generateDeleteSQL(table: string) {
