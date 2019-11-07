@@ -47,8 +47,5 @@ export const update = async (id: string, singer: SingerInterface): Promise<Singe
 }
 
 export const remove = async (id: string): Promise<any> => {
-    const result = await pool.query(generateDeleteSQL(TABLE_NAME), [id])
-    if (result.rowCount === 0) {
-        throw new Error('Singer Not Found')
-    }
+    await pool.query(generateDeleteSQL(TABLE_NAME), [id])
 }
